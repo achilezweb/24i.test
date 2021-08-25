@@ -13,6 +13,21 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+
+$router->group(['prefix' => 'api'], function() use ($router) {
+
+    $router->post('/register', 'AuthController@register');
+    $router->post('/login', 'AuthController@login');
+
+    $router->group(['middleware' => 'auth'], function() use ($router) {
+
+        $router->post('/logout', 'AuthController@logout');
+        $router->get('/assets','AssetController@index');
+        $router->post('/assets','AssetController@store');
+        $router->get('/assets/{id}','AssetController@show');
+        $router->put('/assets/{id}','AssetController@update');
+        $router->delete('/assets/{id}','AssetController@destroy');
+
+    });
+    
 });
