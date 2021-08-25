@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "a772872a-a133-4130-a8a4-ebfd77067be6",
+		"name": "24i.test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get assets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg4MzAwMCwiZXhwIjoxNjI5ODg2NjAwLCJuYmYiOjE2Mjk4ODMwMDAsImp0aSI6Im5jcWVBeW5aOE5BM0R2WmgiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K4AUkhWxPkIoo7GiybfMlelaNb1LKz52nULP3v2DTQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{24i_url}}/api/assets",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create asset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg4MTM1NywiZXhwIjoxNjI5ODg0OTU3LCJuYmYiOjE2Mjk4ODEzNTcsImp0aSI6Im12SWxYdzlXUkhPOGh3WVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.d46tzXxBdrB3d_AyETidCTUx_JP0eQ2doVmWJ-dm_aI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "asset_name",
+							"value": "new Asset Name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{24i_url}}/api/assets",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit asset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg4MzAwMCwiZXhwIjoxNjI5ODg2NjAwLCJuYmYiOjE2Mjk4ODMwMDAsImp0aSI6Im5jcWVBeW5aOE5BM0R2WmgiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.K4AUkhWxPkIoo7GiybfMlelaNb1LKz52nULP3v2DTQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"asset_name\": \"updated asset name\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{24i_url}}/api/assets/c814b7b0-213c-4cd7-a45d-f17cd0fcb81f",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"assets",
+						"c814b7b0-213c-4cd7-a45d-f17cd0fcb81f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show asset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg4MTM1NywiZXhwIjoxNjI5ODg0OTU3LCJuYmYiOjE2Mjk4ODEzNTcsImp0aSI6Im12SWxYdzlXUkhPOGh3WVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.d46tzXxBdrB3d_AyETidCTUx_JP0eQ2doVmWJ-dm_aI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{24i_url}}/api/posts/718f502b-aa57-40a7-bcf8-269c716a0715",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"718f502b-aa57-40a7-bcf8-269c716a0715"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete asset",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg4MTM1NywiZXhwIjoxNjI5ODg0OTU3LCJuYmYiOjE2Mjk4ODEzNTcsImp0aSI6Im12SWxYdzlXUkhPOGh3WVYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.d46tzXxBdrB3d_AyETidCTUx_JP0eQ2doVmWJ-dm_aI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{24i_url}}/api/posts/718f502b-aa57-40a7-bcf8-269c716a0715",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"posts",
+						"718f502b-aa57-40a7-bcf8-269c716a0715"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kiarra51@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{24i_url}}/api/login",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "New Name",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "james@bond.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{24i_url}}/api/register",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvMjRpLnRlc3RcL1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTg3MjMzMywiZXhwIjoxNjI5ODc1OTMzLCJuYmYiOjE2Mjk4NzIzMzMsImp0aSI6ImV3Tjd1TUI1MDhsYzB2RXoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8eKwHFzegkKL28YNWaUEo3P9Djp3Q5GklQExi2bLPlE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{24i_url}}/api/logout",
+					"host": [
+						"{{24i_url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
